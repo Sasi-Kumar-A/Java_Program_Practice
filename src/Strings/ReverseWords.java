@@ -12,7 +12,8 @@ public class ReverseWords {
             char ch = str.charAt(i);
 
             if (ch != ' ') {
-                word = ch + word; // reverse word
+                word = ch + word;
+                System.out.println(word);// reverse word
             } else {
                 result += word + " ";
                 word = "";
