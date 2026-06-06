@@ -5,15 +5,18 @@ public class DuplicateNumber {
 	static Scanner sc = new Scanner(System.in);
 	public static void duplicateNo(int a[]) {
 		int n = a.length;
-		int count = 0,x=0;
+		int count = 0;
+		int temp[] = new int[n];
 		for(int i=0;i<n;i++) {
-			for(int j=i;j<n;j++) {
+			count = 0;
+			for(int j=0;j<n;j++) {
 				if(a[i] == a[j]) {
 					count++;
 				}
-			}e
-			if(count >1) {
-				System.out.println(a[i]);
+				temp[i] = count;
+			}
+			if(temp[i] >1) {
+				System.out.print(a[i]+" ");
 			}
 		}
 		
